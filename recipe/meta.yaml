@@ -19,7 +19,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
-    - make # [not win]
+    - make  # [not win]
   host:
     - python
     - pip
