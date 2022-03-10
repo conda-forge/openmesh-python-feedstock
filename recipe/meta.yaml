@@ -19,6 +19,8 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
+    - make  # [not win]
+    - ninja  # [win]
   host:
     - python
     - pip
@@ -40,7 +42,7 @@ test:
 
 about:
   home: https://www.graphics.rwth-aachen.de:9000/OpenMesh/openmesh-python
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: OpenMesh Python Bindings
