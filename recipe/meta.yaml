@@ -12,12 +12,13 @@ source:
 
 build:
   skip: true  # [win and py>39]  # TODO: Fix issue with undefined ssize_t and re-enable build
-  number: 4
+  number: 5
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake
     - make  # [not win]
@@ -30,7 +31,6 @@ requirements:
     - pybind11
   run:
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
