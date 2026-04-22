@@ -7,12 +7,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ pypiname[0] }}/{{ pypiname }}/{{ pypiname }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ pypiname[0] }}/{{ pypiname }}/{{ pypiname }}-{{ version }}.tar.gz
   sha256: 6fd3fa41a68148e4a7523f562426aa9758bf65ccc6642abcf79c37bae9c6af3c
 
 build:
   skip: true  # [win and py>39]  # TODO: Fix issue with undefined ssize_t and re-enable build
-  number: 6
+  number: 7
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
